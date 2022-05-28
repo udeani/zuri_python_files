@@ -17,6 +17,10 @@ def count_words():
 	words = {}
 
 	for word in text.split():
+		# checking if the word contains punctuation and stripping it if True.
+		if not word.isalpha():
+			word = word[:-1]
+		# checking if the word have been stored before in the dictionary and adding it.
 		if not words.get(word):
 			words[word] = 1
 		else:
